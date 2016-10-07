@@ -1,6 +1,6 @@
 # Word Count Hist
 
-Allows user to create a histogram of word counts of all files and sub-directorys, including zipped directories in a given directory path.
+Allows user to create a histogram of word counts of all files and sub-directories, including zipped directories in a given directory path.
 
 Set up:
 
@@ -34,7 +34,7 @@ Counting only English words
 ```
 
 Note that words list of `nltk` library to check if the words are English. 
-There you would have to install `nltk` library and then download the corpus with `nltk.download()`.
+Therefore you would have to install `nltk` library and then download the corpus with `nltk.download()`.
 
 Run tests:
 
