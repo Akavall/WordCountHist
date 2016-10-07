@@ -13,5 +13,5 @@ def histogram(my_list):
     plt.hist(my_list, n_bins)
     plt.title("Distribution of word counts")
     plt.xlabel("Word appearances")
-    plt.ylabel("Count appearance")
+    plt.ylabel("Count appearances")
     plt.show()
