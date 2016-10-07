@@ -15,7 +15,3 @@ def histogram(my_list):
     plt.xlabel("Word appearances")
     plt.ylabel("Count appearance")
     plt.show()
-
-if __name__ == "__main__":
-    x = [1,2,3,1,3,6,2,2,3,2,1,2,5,10,10,10,10]
-    histogram(x)
