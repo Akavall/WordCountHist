@@ -5,11 +5,14 @@ from collections import Counter
 import logging
 import string
 
-def make_counter(line):
+def make_counter(line, english=None):
     no_punc = remove_punctuation(line)
     words = [w.lower() for w in no_punc.rstrip().split(" ")]
     ascii_words = [w for w in words if check_ascii(w)]
     not_num_ascii_words = [w for w in words if not w.isdigit()]
+    if english:
+        return Counter(w for w in not_num_ascii_words if w in english)
+
     return Counter(not_num_ascii_words)
     
 def remove_punctuation(line):

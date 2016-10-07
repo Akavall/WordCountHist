@@ -27,6 +27,15 @@ How to use:
 ./word_count_hist.py /your/directory/data/path
 ```
 
+Counting only English words
+
+```
+./word_count_hist.py /your/directory/data/path english
+```
+
+Note that words list of `nltk` library to check if the words are English. 
+There you would have to install `nltk` library and then download the corpus with `nltk.download()`.
+
 Run tests:
 
 In the folder that holds `/utilites` run:
@@ -40,3 +49,6 @@ or
 ```
 nosetests -v
 ```
+
+
+

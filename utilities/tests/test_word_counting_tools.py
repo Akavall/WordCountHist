@@ -43,3 +43,8 @@ def test_make_counter_float():
     expected = Counter({"hi": 2})
     result = make_counter("hi, Hi, 1.23\n")
     compare(expected, result)
+
+def test_make_counter_english():
+    expected = Counter({"cat": 2, "hi": 1})
+    result = make_counter("Cat, cat, hi, akjs, ahs!!", english={"cat", "hi"})
+    compare(expected, result)
