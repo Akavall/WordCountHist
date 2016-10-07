@@ -26,3 +26,17 @@ How to use:
 ```
 ./word_count_hist.py /your/directory/data/path
 ```
+
+Run tests:
+
+In the folder that holds `/utilites` run:
+
+```
+nosetests
+```
+
+or 
+
+```
+nosetests -v
+```
