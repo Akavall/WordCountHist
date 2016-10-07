@@ -9,7 +9,7 @@ def histogram(my_list):
     if not my_list:
         logging.error("list provided to histogram is empty, check that you provided the correct directory")
         return
-    n_bins = int(np.sqrt(len(my_list)))
+    n_bins = int(np.sqrt(len(my_list) + 1))
     plt.hist(my_list, n_bins)
     plt.title("Distribution of word counts")
     plt.xlabel("Word appearances")
