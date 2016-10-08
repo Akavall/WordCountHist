@@ -8,13 +8,6 @@ Set up:
 git clone https://github.com/Akavall/WordCountHist
 ```
 
-Now you want to add the directory that contains `/utilities` to your PYTHONPATH,
-For example:
-
-```
-export PYTHONPATH="${PYTHONPATH}:/your/directory/path"
-```
-
 And you have to create an executable:
 
 ```
