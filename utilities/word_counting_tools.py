@@ -7,13 +7,13 @@ import string
 
 def make_counter(line, english=None):
     no_punc = remove_punctuation(line)
-    words = [w.lower() for w in no_punc.rstrip().split(" ")]
+    words = [w.lower() for w in no_punc.rstrip().split(" ") if w]
     ascii_words = [w for w in words if check_ascii(w)]
     not_num_ascii_words = [w for w in words if not w.isdigit()]
     if english:
-        return Counter(w for w in not_num_ascii_words if w in english)
+        return sum(1 for w in not_num_ascii_words if w in english)
 
-    return Counter(not_num_ascii_words)
+    return len(not_num_ascii_words)
     
 def remove_punctuation(line):
     punctuation = set(string.punctuation)

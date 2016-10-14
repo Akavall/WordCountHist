@@ -15,6 +15,6 @@ if __name__ == "__main__":
     else:
         all_words_counter = make_all_words_counter(directory_path, english=None)
 
-    histogram(all_words_counter.values())
+    histogram(all_words_counter)
 
     
