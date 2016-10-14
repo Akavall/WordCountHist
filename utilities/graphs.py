@@ -11,7 +11,7 @@ def histogram(my_list):
         return
     n_bins = int(np.sqrt(len(my_list) + 1))
     plt.hist(my_list, n_bins)
-    plt.title("Distribution of word counts")
-    plt.xlabel("Word appearances")
-    plt.ylabel("Count appearances")
+    plt.title("Distribution of word counts in a file")
+    plt.xlabel("Count per file")
+    plt.ylabel("Frequency")
     plt.show()

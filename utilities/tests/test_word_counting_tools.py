@@ -30,21 +30,26 @@ def test_remove_punctuation():
     compare(expected, result)
 
 def test_make_counter():
-    expected = Counter({"hi": 1, "how": 1, "are": 1, "you": 1})
+    expected = 4
     result = make_counter("Hi, how are you\n")
     compare(expected, result)
 
 def test_make_counter_int():
-    expected = Counter({"hi": 2})
+    expected = 2
     result = make_counter("HI, hi, 123\n")
     compare(expected, result)
     
 def test_make_counter_float():
-    expected = Counter({"hi": 2})
+    expected = 2
     result = make_counter("hi, Hi, 1.23\n")
     compare(expected, result)
 
 def test_make_counter_english():
-    expected = Counter({"cat": 2, "hi": 1})
+    expected = 3
     result = make_counter("Cat, cat, hi, akjs, ahs!!", english={"cat", "hi"})
+    compare(expected, result)
+
+def test_make_counter_empty():
+    expected = 0
+    result = make_counter("\n")
     compare(expected, result)
